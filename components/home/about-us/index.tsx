@@ -4,8 +4,8 @@ import { MoveRightIcon } from "lucide-react"
 export const AboutUs = () => {
     return (
         <section className="py-16 bg-about-us">
-            <div className="mx-auto max-w-screen-xl flex flex-col xl:flex-row justify-around items-center gap-x-20 gap-y-20">
-                <div className="flex flex-col items-center xl:items-end xl:w-2/5 text-center xl:text-end">
+            <div className="mx-auto max-w-screen-xl flex flex-col xl:flex-row justify-around items-center gap-x-40 gap-y-20">
+                <div className="flex flex-col items-center xl:items-end xl:w-2/6 text-center xl:text-end">
                     <h2 className="font-cormorant text-3xl md:text-6xl lg:text-6xl font-bold text-[#DCCA87]">
                         About Us
                     </h2>
@@ -28,7 +28,7 @@ export const AboutUs = () => {
                         className="object-cover"
                     />
                 </div>
-                <div className="flex flex-col items-center xl:items-start xl:w-2/5 text-center xl:text-start">
+                <div className="flex flex-col items-center xl:items-start xl:w-2/6 text-center xl:text-start">
                     <h2 className="font-cormorant text-3xl md:text-6xl lg:text-6xl font-bold text-[#DCCA87]">
                         Our History
                     </h2>

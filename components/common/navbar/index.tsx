@@ -41,7 +41,7 @@ export const Navbar = () => {
     ]
 
     return (
-        <nav className="fixed top-0 py-5 lg:px-10 w-full bg-black z-50">
+        <nav className="fixed top-0 p-5 lg:px-10 w-full bg-black z-50">
             <div className="mx-auto max-w-screen-xl">
                 <div className="flex justify-between items-center">
                     <div className="flex items-center gap-x-8">

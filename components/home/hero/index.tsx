@@ -25,6 +25,7 @@ export const Hero = () => {
                 slidesPerView={1}
                 loop={true}
                 modules={[Navigation, Autoplay, Keyboard]}
+                className="relative"
             >
                 <SwiperSlide>
                     <div className="mx-auto max-w-screen-xl px-4 py-20 sm:px-6 sm:py-12 md:py-24 lg:px-8 lg:py-16">

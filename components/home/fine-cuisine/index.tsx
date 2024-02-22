@@ -1,6 +1,6 @@
 export const FineCuisine = () => {
     return (
-        <section className="py-12 xl:py-28 bg-black overflow-hidden">
+        <section className="mx-auto py-12 xl:py-28 max-w-screen-xl bg-black overflow-hidden">
             <div className="text-center">
                 <h2 className="font-cormorant text-2xl font-bold text-white">
                     Fine Cuisine

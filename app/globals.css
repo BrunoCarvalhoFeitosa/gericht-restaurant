@@ -31,18 +31,16 @@ body {
 }
 
 .swiper-button-prev {
-  top: 30px !important;
-  left: 93% !important;
+  left: 28px !important;
 }
 
 .swiper-button-next {
-  top: 30px !important;
-  right: 40px !important;
+  right: 28px !important;
 }
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
-  font-size: 22px !important;
+  font-size: 50px !important;
 }
 
 .swiper-pagination-bullet {
@@ -55,11 +53,11 @@ body {
 
 .autoplay-progress {
   position: absolute;
-  top: 14px;
-  right: 95px;
+  bottom: 30px;
+  right: 28px;
   z-index: 10;
-  width: 32px;
-  height: 32px;
+  width: 45px;
+  height: 45px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -85,6 +83,11 @@ body {
 }
 
 @media screen and (max-width: 640px) {
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    font-size: 20px !important;
+  }
+
   .swiper-button-prev {
     top: 48px !important;
     left: 85% !important;
@@ -102,27 +105,50 @@ body {
 }
 
 @media screen and (min-width: 641px) and (max-width: 1023px) {
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    font-size: 30px !important;
+  }
+
   .swiper-button-prev {
-    top: 10% !important;
+    top: 48px !important;
     left: 90% !important;
   }
   
   .swiper-button-next {
-    top: 10% !important;
+    top: 48px !important;
     right: 20px !important;
   }
 
   .autoplay-progress {
-    top: 40px;
+    top: 32px;
     right: 85px;
-    width: 34px;
-    height: 34px;
+    width: 36px;
+    height: 36px;
   }
 }
 
 @media screen and (device-width: 1024px) {
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    font-size: 30px !important;
+  }
+
   .swiper-button-prev {
-    left: 91% !important;
+    top: 20px !important;
+    left: 90% !important;
+  }
+  
+  .swiper-button-next {
+    top: 20px !important;
+    left: 94% !important;
+  }
+
+  .autoplay-progress {
+    top: 0px;
+    right: 115px;
+    width: 40px;
+    height: 40px;
   }
 }
 
