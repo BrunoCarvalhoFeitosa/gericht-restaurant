@@ -3,9 +3,7 @@ export type Chef = {
     level: string,
     picture: string,
     description: string,
-    achievements: [
-        {
-            achievement: string
-        }
-    ]
+    achievements: {
+        achievement: string
+    }[]
 }

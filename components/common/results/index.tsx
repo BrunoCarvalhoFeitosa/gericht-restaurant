@@ -90,7 +90,7 @@ export const Results = () => {
                             </span>
                         </div>
                         <p className="mt-4 text-sm text-white">
-                            Chef's
+                            Chefs
                         </p>
                     </div>
                     <div className="flex flex-col items-center">

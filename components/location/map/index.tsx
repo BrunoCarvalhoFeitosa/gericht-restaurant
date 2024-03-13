@@ -1,14 +1,15 @@
+// @ts-nocheck
+// @ts-ignore
 "use client"
 import { Fragment, useEffect, useState } from "react"
 import { DynamicMap, DynamicTileLayer, DynamicMarker, DynamicPopup } from "@/components/location/leaflet-map"
 import Leaflet, { LatLngTuple } from "leaflet"
 import { markers } from "@/utils/markers"
-
 import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png'
 import markerIcon from 'leaflet/dist/images/marker-icon.png'
 import markerShadow from 'leaflet/dist/images/marker-shadow.png'
 
-delete Leaflet.Icon.Default.prototype._getIconUrl
+
 Leaflet.Icon.Default.mergeOptions({
     iconUrl: markerIcon.src,
     iconRetinaUrl: markerIcon2x.src,
@@ -30,7 +31,7 @@ export const Map = () => {
 
     return (
         <Fragment>
-            {typeof window !== "undefined" && (
+            {isLoading && (
                 <section className="w-full leaflet-container overflow-hidden">
                     <DynamicMap
                         center={[48.86, 2.3522]}

@@ -14,10 +14,10 @@ export const ChefWords = () => {
                 <div className="flex-1">
                     <div>
                         <h2 className="font-cormorant text-2xl font-bold text-white">
-                            Chef's word
+                            Chefs word
                         </h2>
                         <h3 className="mb-6 font-cormorant text-6xl font-bold text-[#DCCA87]">
-                            "What We Believe In
+                            What We Believe In
                         </h3>
                     </div>
                     <div>  

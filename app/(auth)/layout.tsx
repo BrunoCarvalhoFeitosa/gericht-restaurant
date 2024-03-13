@@ -32,43 +32,43 @@ const AuthPageLayout = ({ children }: { children: React.ReactNode }) => {
                             <SwiperSlide className="pr-5">
                                 <img
                                     src="/images/auth/plate-decorated.png"
-                                    className=""
+                                    alt="Plate"
                                 />
                             </SwiperSlide>
                             <SwiperSlide className="pr-5">
                                 <img
                                     src="/images/auth/plate-decorated.png"
-                                    className=""
+                                    alt="Plate"
                                 />
                             </SwiperSlide>
                             <SwiperSlide className="pr-5">
                                 <img
                                     src="/images/auth/plate-decorated.png"
-                                    className=""
+                                    alt="Plate"
                                 />
                             </SwiperSlide>
                             <SwiperSlide className="pr-5">
                                 <img
                                     src="/images/auth/plate-decorated.png"
-                                    className=""
+                                    alt="Plate"
                                 />
                             </SwiperSlide>
                             <SwiperSlide className="pr-5">
                                 <img
                                     src="/images/auth/plate-decorated.png"
-                                    className=""
+                                    alt="Plate"
                                 />
                             </SwiperSlide>
                             <SwiperSlide className="pr-5">
                                 <img
                                     src="/images/auth/plate-decorated.png"
-                                    className=""
+                                    alt="Plate"
                                 />
                             </SwiperSlide>
                             <SwiperSlide className="pr-5">
                                 <img
                                     src="/images/auth/plate-decorated.png"
-                                    className=""
+                                    alt="Plate"
                                 />
                             </SwiperSlide>
                         </Swiper>

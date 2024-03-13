@@ -25,6 +25,8 @@ export const AboutUs = () => {
                 <div className="flex justify-center flex-1">
                     <img
                         src="/images/about-us/about-us-knife-image.png"
+                        alt="Knife"
+                        title="Knife"
                         className="object-cover"
                     />
                 </div>

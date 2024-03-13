@@ -8,9 +8,11 @@ export const Hero = () => {
     const progressCircle = useRef<SVGSVGElement | null>(null)
     const progressContent = useRef<HTMLSpanElement | null>(null)
 
-    const onAutoplayTimeLeft = (s, time: any, progress: any) => {
-        progressCircle.current?.style.setProperty('--progress', String(1 - progress))
-        progressContent.current.textContent = `${Math.ceil(time / 1000)}s`
+    const onAutoplayTimeLeft = (_s: any, time: number, progress: number) => {
+        progressCircle?.current?.style.setProperty('--progress', String(1 - progress))
+        if (progressContent.current?.textContent) {
+            progressContent.current.textContent = `${Math.ceil(time / 1000)}s`
+        }
     }
 
     return (
@@ -52,7 +54,7 @@ export const Hero = () => {
                             </div>
                             <div className="flex-1">
                                 <img
-                                    alt=""
+                                    alt="Hero image"
                                     src="/images/hero/hero-image-02.png"
                                     className="w-full h-full object-cover"
                                 />
@@ -85,7 +87,7 @@ export const Hero = () => {
                             </div>
                             <div className="flex-1">
                                 <img
-                                    alt=""
+                                    alt="Hero image"
                                     src="/images/hero/hero-image-03.png"
                                     className="w-full h-full object-cover"
                                 />

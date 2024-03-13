@@ -67,8 +67,8 @@ export const About = ({ data }: AboutProps) => {
                     {data.description}
                 </p>
                 <ul className="flex flex-col gap-y-6">
-                    {data.achievements.map(({ achievement }) => (
-                        <li className="flex items-center gap-x-2 text-[#AAA]">
+                    {data.achievements.map(({ achievement }, index) => (
+                        <li key={index} className="flex items-center gap-x-2 text-[#AAA]">
                             <MinusIcon className="text-[#DCCA87]" />
                             {achievement}
                         </li>

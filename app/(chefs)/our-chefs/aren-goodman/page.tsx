@@ -20,7 +20,10 @@ const ChefPage = () => {
 
     useEffect(() => {
         const chef = chefs.filter((chef) => chef?.name == chefName)
-        return setData(chef[0])
+
+        if (chef) {
+            return setData(chef[0])
+        }
     }, [pathname, chefName, setData])
 
     return (

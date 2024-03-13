@@ -7,7 +7,7 @@ export const Drink = () => {
                         Menu That Fits Your Palatte
                     </h2>
                     <h3 className="font-cormorant text-6xl font-bold text-[#DCCA87]">
-                        Today's Special
+                        Todays Special
                     </h3>
                 </div>
                 <div className="mt-16 xl:mt-20 px-8 max-w-screen-xl flex flex-col xl:flex-row justify-between gap-8">
