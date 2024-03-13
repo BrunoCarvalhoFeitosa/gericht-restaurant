@@ -45,12 +45,14 @@ export const Navbar = () => {
             <div className="mx-auto max-w-screen-xl">
                 <div className="flex justify-between items-center">
                     <div className="flex items-center gap-x-8">
-                        <Image
-                            src="/svg/logo.svg"
-                            width="100"
-                            height="40"
-                            alt="Logo"
-                        />
+                        <Link href="/">
+                            <Image
+                                src="/svg/logo.svg"
+                                width="100"
+                                height="40"
+                                alt="Logo"
+                            />
+                        </Link>
                         <div className="hidden lg:flex">
                             <NavigationMenu>
                                 <NavigationMenuList>
@@ -64,26 +66,25 @@ export const Navbar = () => {
                                                     <NavigationMenuLink asChild>
                                                         <a
                                                             className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-yellow-200 to-yellow-500 p-6 no-underline outline-none focus:shadow-md"
-                                                            href="/"
+                                                            href="/our-menu"
                                                         >
                                                             <div className="mb-2 mt-4 text-lg font-medium">
-                                                                shadcn/ui
+                                                                Our menu
                                                             </div>
                                                             <p className="text-sm leading-tight text-muted-foreground">
-                                                                Beautifully designed components built with Radix UI and
-                                                                Tailwind CSS.
+                                                                Breakfast, lunch, dinner, pastries and more.
                                                             </p>
                                                         </a>
                                                     </NavigationMenuLink>
                                                 </li>
-                                                <ListItem href="/docs" title="Introduction">
-                                                    Re-usable components built using Radix UI and Tailwind CSS.
+                                                <ListItem href="/our-menu" title="Breakfast">
+                                                   More than 30 breakfast options with sides.
                                                 </ListItem>
-                                                <ListItem href="/docs/installation" title="Installation">
-                                                    How to install dependencies and structure your app.
+                                                <ListItem href="/our-menu" title="Lunch">
+                                                    More than 40 lunch options with special drinks or juices.
                                                 </ListItem>
-                                                <ListItem href="/docs/primitives/typography" title="Typography">
-                                                    Styles for headings, paragraphs, lists...etc
+                                                <ListItem href="/our-menu" title="Diner">
+                                                    More than 40 diner options with special drinks or juices.
                                                 </ListItem>
                                             </ul>
                                         </NavigationMenuContent>
@@ -98,26 +99,25 @@ export const Navbar = () => {
                                                     <NavigationMenuLink asChild>
                                                         <a
                                                             className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-yellow-200 to-yellow-500 p-6 no-underline outline-none focus:shadow-md"
-                                                            href="/"
+                                                            href="/our-history"
                                                         >
                                                             <div className="mb-2 mt-4 text-lg font-medium">
-                                                                shadcn/ui
+                                                                Institutional
                                                             </div>
                                                             <p className="text-sm leading-tight text-muted-foreground">
-                                                                Beautifully designed components built with Radix UI and
-                                                                Tailwind CSS.
+                                                                Learn more about our history, employees, mission and values.
                                                             </p>
                                                         </a>
                                                     </NavigationMenuLink>
                                                 </li>
-                                                <ListItem href="/docs" title="Introduction">
-                                                    Re-usable components built using Radix UI and Tailwind CSS.
+                                                <ListItem href="/our-history" title="Our history">
+                                                    When we started, know where our restaurants are located and more.
                                                 </ListItem>
-                                                <ListItem href="/docs/installation" title="Installation">
-                                                    How to install dependencies and structure your app.
+                                                <ListItem href="/our-chefs" title="Chefs">
+                                                    Get to know our chefs, their skills and specialties.
                                                 </ListItem>
-                                                <ListItem href="/docs/primitives/typography" title="Typography">
-                                                    Styles for headings, paragraphs, lists...etc
+                                                <ListItem href="/location" title="Location of restaurants">
+                                                    Find out where our restaurants are located.
                                                 </ListItem>
                                             </ul>
                                         </NavigationMenuContent>
@@ -132,26 +132,25 @@ export const Navbar = () => {
                                                     <NavigationMenuLink asChild>
                                                         <a
                                                             className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-yellow-200 to-yellow-500 p-6 no-underline outline-none focus:shadow-md"
-                                                            href="/"
+                                                            href="/sign-in"
                                                         >
                                                             <div className="mb-2 mt-4 text-lg font-medium">
                                                                 User actions
                                                             </div>
                                                             <p className="text-sm leading-tight text-muted-foreground">
-                                                                Beautifully designed components built with Radix UI and
-                                                                Tailwind CSS.
+                                                                Create your account, log in and book a table for a special date.
                                                             </p>
                                                         </a>
                                                     </NavigationMenuLink>
                                                 </li>
                                                 <ListItem href="/sign-in" title="Sign in">
-                                                    Re-usable components built using Radix UI and Tailwind CSS.
+                                                    Access your account in a simple and secure way.
                                                 </ListItem>
                                                 <ListItem href="/sign-up" title="Sign Up">
-                                                    How to install dependencies and structure your app.
+                                                    Create your account in a simple and secure way.
                                                 </ListItem>
-                                                <ListItem href="/newsteller" title="Newsletter">
-                                                    How to install dependencies and structure your app.
+                                                <ListItem href="/book-a-table" title="Book a table">
+                                                    Book a table.
                                                 </ListItem>
                                             </ul>
                                         </NavigationMenuContent>

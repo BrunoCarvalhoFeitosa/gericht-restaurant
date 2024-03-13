@@ -22,7 +22,7 @@ const config = {
     },
     extend: {
       backgroundImage: {
-        "about-us": "url('/images/about-us-background.png')"
+        "about-us": "url('/images/backgrounds/background.png')"
       },
       colors: {
         border: "hsl(var(--border))",

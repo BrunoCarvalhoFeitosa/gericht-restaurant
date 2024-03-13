@@ -1,5 +1,6 @@
 "use client"
 import { useState } from "react"
+import Link from "next/link"
 import Image from "next/image"
 import { z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -41,7 +42,7 @@ const formSchema = z.object({
         .min(2, { message: "Password must be at least 2 characters." })
 })
 
-const SignUp = () => {
+const SignUpPage = () => {
     const [showPassword, setShowPassword] = useState<boolean>(false)
 
     const form = useForm<z.infer<typeof formSchema>>({
@@ -65,14 +66,16 @@ const SignUp = () => {
     }
 
     return (
-        <div className="mx-auto p-4 w-[90%] md:w-[90%]">
+        <div className="mx-auto py-20 md:py-0 p-4 w-[90%] md:w-[90%] xl:w-[70%]">
             <div>
-                <Image
-                    src="/svg/logo.svg"
-                    width="200"
-                    height="40"
-                    alt="Logo"
-                />
+                <Link href="/">
+                    <Image
+                        src="/svg/logo.svg"
+                        width="200"
+                        height="40"
+                        alt="Logo"
+                    />
+                </Link>
             </div>
             <div className="mt-14">
                 <Form {...form}>
@@ -227,6 +230,11 @@ const SignUp = () => {
                                 )}
                             />
                         </div>
+                        <div className="flex justify-end">
+                            <Link href="/sign-in" className="text-sm underline text-white">
+                                Have an account? Sign in
+                            </Link>
+                        </div>
                         <Button
                             variant="ghost"
                             type="submit"
@@ -241,4 +249,4 @@ const SignUp = () => {
     )
 }
 
-export default SignUp
+export default SignUpPage

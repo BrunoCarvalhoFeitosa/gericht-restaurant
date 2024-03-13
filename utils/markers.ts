@@ -1,22 +1,22 @@
 export const markers = [
     {
+        geoCode: [48.76, 2],
+        popUp: "Gerícht French Resturant in Voisins-le-Bretonneux"
+    },
+    {
         geoCode: [48.86, 2.3522],
-        popUp: "Restaurant 1"
+        popUp: "Gerícht French Resturant in Paris"
     },
     {
-        geoCode: [48.85, 2.3522],
-        popUp: "Restaurant 2"
+        geoCode: [48.86, 2],
+        popUp: "Gerícht French Resturant Villepreux I"
     },
     {
-        geoCode: [48.880, 2.34],
-        popUp: "Restaurant 3"
+        geoCode: [48.886, 2],
+        popUp: "Gerícht French Resturant Villepreux II"
     },
     {
-        geoCode: [48.886, 2.34],
-        popUp: "Restaurant 4"
-    },
-    {
-        geoCode: [48.50, 2.1],
-        popUp: "Restaurant 5"
+        geoCode: [48.89, 2.76],
+        popUp: "Gerícht French Resturant in Montévrain"
     },
 ]

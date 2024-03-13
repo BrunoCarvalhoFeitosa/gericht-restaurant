@@ -15,7 +15,7 @@ export const AboutUs = () => {
                         quidem quam repellat.
                     </p>
                     <a
-                        href="#"
+                        href="/about-us"
                         className="mt-8 flex items-center justify-end gap-x-3 bg-[#DCCA87] px-12 py-3 font-cormorant text-lg font-medium w-fit transition focus:outline-none focus:ring"
                     >
                         Know More
@@ -24,7 +24,7 @@ export const AboutUs = () => {
                 </div>
                 <div className="flex justify-center flex-1">
                     <img
-                        src="/images/about-us-knife-image.png"
+                        src="/images/about-us/about-us-knife-image.png"
                         className="object-cover"
                     />
                 </div>
@@ -38,7 +38,7 @@ export const AboutUs = () => {
                         quidem quam repellat.
                     </p>
                     <a
-                        href="#"
+                        href="/our-history"
                         className="mt-8 flex items-center justify-end gap-x-3 bg-[#DCCA87] px-12 py-3 font-cormorant text-lg font-medium w-fit transition focus:outline-none focus:ring"
                     >
                         Know More

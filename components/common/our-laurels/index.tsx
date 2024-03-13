@@ -15,7 +15,7 @@ export const OurLaurels = () => {
                         <div className="flex items-center gap-x-4">
                             <div>
                                 <img
-                                    src="/images/laurels-awards-2.png"
+                                    src="/images/our-laurels/laurels-awards-2.png"
                                     alt="Bib Gourmond"
                                     title="Bib Gourmond"
                                 />
@@ -32,7 +32,7 @@ export const OurLaurels = () => {
                         <div className="flex items-center gap-x-4">
                             <div>
                                 <img
-                                    src="/images/laurels-awards-1.png"
+                                    src="/images/our-laurels/laurels-awards-1.png"
                                     alt="Rising Star"
                                     title="Rising Star"
                                 />
@@ -49,7 +49,7 @@ export const OurLaurels = () => {
                         <div className="flex items-center gap-x-4">
                             <div>
                                 <img
-                                    src="/images/laurels-awards-5.png"
+                                    src="/images/our-laurels/laurels-awards-5.png"
                                     alt="AA Hospitality"
                                     title="AA Hospitality"
                                 />
@@ -66,7 +66,7 @@ export const OurLaurels = () => {
                         <div className="flex items-center gap-x-4">
                             <div>
                                 <img
-                                    src="/images/laurels-awards-3.png"
+                                    src="/images/our-laurels/laurels-awards-3.png"
                                     alt="Outstanding Chef"
                                     title="Outstanding Chef"
                                 />
@@ -84,7 +84,7 @@ export const OurLaurels = () => {
                 </div>
                 <div>
                     <img
-                        src="/images/lourels-image.png"
+                        src="/images/our-laurels/lourels-image.png"
                         alt="Our Laurels"
                         title="Our Laurels"
                         className="mx-auto md:w-[90%] xl:w-full"

@@ -12,7 +12,7 @@ export const FineCuisine = () => {
             <div className="mt-8 grid grid-cols-1 md:grid-cols-3">
                 <div className="animate-spin-slow">
                     <img
-                        src="/images/fine-cuisine-image-01.png"
+                        src="/images/fine-cuisine/fine-cuisine-image-01.png"
                         alt="Tacos"
                         title="Tacos"
                         className="scale-90 hover:scale-105 transition-all duration-500 cursor-zoom-in"
@@ -20,7 +20,7 @@ export const FineCuisine = () => {
                 </div>
                 <div className="animate-spin-slow">
                     <img
-                        src="/images/fine-cuisine-image-02.png"
+                        src="/images/fine-cuisine/fine-cuisine-image-02.png"
                         alt="Vegan Soup"
                         title="Vegan Soup"
                         className="scale-90 hover:scale-105 transition-all duration-500 cursor-zoom-in"
@@ -28,7 +28,7 @@ export const FineCuisine = () => {
                 </div>
                 <div className="animate-spin-slow">
                     <img
-                        src="/images/fine-cuisine-image-01.png"
+                        src="/images/fine-cuisine/fine-cuisine-image-01.png"
                         alt="Tacos"
                         title="Tacos"
                         className="scale-90 hover:scale-105 transition-all duration-500 cursor-zoom-in"

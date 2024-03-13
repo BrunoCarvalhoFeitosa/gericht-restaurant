@@ -5,7 +5,7 @@ export const ChefWords = () => {
                 <div className="mb-20 xl:mb-0 flex-1">
                     <picture>
                         <img
-                            src="/images/chef-image.png"
+                            src="/images/chef-words/chef-image.png"
                             alt="Chef Kevin Luo"
                             title="Chef Kevin Luo"
                         />
@@ -39,10 +39,10 @@ export const ChefWords = () => {
                     <div>
                         <picture>
                             <img
-                                src="/images/chef-signature-image.png"
+                                src="/images/chef-words/chef-signature-image.png"
                                 alt="Signature Chef Kevin Luo"
                                 title="Signature Chef Kevin Luo"
-                                className="w-52"
+                                className="w-72 hover:scale-110 transition-all duration-300"
                             />
                         </picture>
                     </div>

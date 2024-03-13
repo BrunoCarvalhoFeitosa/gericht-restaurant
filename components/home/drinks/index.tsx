@@ -164,7 +164,7 @@ export const Drink = () => {
                     </div>
                     <div className="flex-1 overflow-hidden">
                         <img
-                            src="/images/drink-image.png"
+                            src="/images/drinks/drink-image.png"
                             alt="Drinks"
                             className="hover:scale-125 transition-all duration-300 cursor-zoom-in"
                         />

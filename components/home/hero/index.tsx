@@ -43,7 +43,7 @@ export const Hero = () => {
                                     quidem quam repellat.
                                 </p>
                                 <a
-                                    href="#"
+                                    href="/our-menu"
                                     className="mt-8 flex items-center gap-x-3 bg-[#DCCA87] px-12 py-3 font-cormorant text-lg font-medium w-fit transition focus:outline-none focus:ring"
                                 >
                                     Explore Menu
@@ -53,7 +53,7 @@ export const Hero = () => {
                             <div className="flex-1">
                                 <img
                                     alt=""
-                                    src="/images/hero-image-02.png"
+                                    src="/images/hero/hero-image-02.png"
                                     className="w-full h-full object-cover"
                                 />
                             </div>
@@ -76,7 +76,7 @@ export const Hero = () => {
                                     quidem quam repellat.
                                 </p>
                                 <a
-                                    href="#"
+                                    href="/our-menu"
                                     className="mt-8 flex items-center gap-x-3 bg-[#DCCA87] px-12 py-3 font-cormorant text-lg font-medium w-fit transition focus:outline-none focus:ring"
                                 >
                                     Explore Menu
@@ -86,7 +86,7 @@ export const Hero = () => {
                             <div className="flex-1">
                                 <img
                                     alt=""
-                                    src="/images/hero-image-03.png"
+                                    src="/images/hero/hero-image-03.png"
                                     className="w-full h-full object-cover"
                                 />
                             </div>

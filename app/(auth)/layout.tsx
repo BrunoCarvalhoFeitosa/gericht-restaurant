@@ -3,7 +3,7 @@ import { Fragment, useEffect, useState } from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Pagination, Mousewheel, Autoplay } from "swiper/modules"
 
-const AuthLayout = ({ children }: { children: React.ReactNode }) => {
+const AuthPageLayout = ({ children }: { children: React.ReactNode }) => {
     const [isLoading, setIsLoading] = useState<boolean>(false)
 
     useEffect(() => {
@@ -31,43 +31,43 @@ const AuthLayout = ({ children }: { children: React.ReactNode }) => {
                         >
                             <SwiperSlide className="pr-5">
                                 <img
-                                    src="/images/plate-decorated-02.png"
+                                    src="/images/auth/plate-decorated.png"
                                     className=""
                                 />
                             </SwiperSlide>
                             <SwiperSlide className="pr-5">
                                 <img
-                                    src="/images/plate-decorated-02.png"
+                                    src="/images/auth/plate-decorated.png"
                                     className=""
                                 />
                             </SwiperSlide>
                             <SwiperSlide className="pr-5">
                                 <img
-                                    src="/images/plate-decorated-02.png"
+                                    src="/images/auth/plate-decorated.png"
                                     className=""
                                 />
                             </SwiperSlide>
                             <SwiperSlide className="pr-5">
                                 <img
-                                    src="/images/plate-decorated-02.png"
+                                    src="/images/auth/plate-decorated.png"
                                     className=""
                                 />
                             </SwiperSlide>
                             <SwiperSlide className="pr-5">
                                 <img
-                                    src="/images/plate-decorated-02.png"
+                                    src="/images/auth/plate-decorated.png"
                                     className=""
                                 />
                             </SwiperSlide>
                             <SwiperSlide className="pr-5">
                                 <img
-                                    src="/images/plate-decorated-02.png"
+                                    src="/images/auth/plate-decorated.png"
                                     className=""
                                 />
                             </SwiperSlide>
                             <SwiperSlide className="pr-5">
                                 <img
-                                    src="/images/plate-decorated-02.png"
+                                    src="/images/auth/plate-decorated.png"
                                     className=""
                                 />
                             </SwiperSlide>
@@ -79,4 +79,4 @@ const AuthLayout = ({ children }: { children: React.ReactNode }) => {
     )
 }
  
-export default AuthLayout
+export default AuthPageLayout

@@ -6,9 +6,10 @@ import { Drink } from "@/components/home/drinks"
 import { ChefWords } from "@/components/common/chef-words"
 import { Video } from "@/components/common/video"
 import { OurLaurels } from "@/components/common/our-laurels"
-import { PhotoGallery } from "@/components/photo-gallery"
+import { Results } from "@/components/common/results"
+import { ScrollTop } from "@/components/common/scroll-top"
 
-const Home = () => {
+const HomePage = () => {
     return (
         <main>
             <Navbar />
@@ -19,9 +20,10 @@ const Home = () => {
             <ChefWords />
             <Video />
             <OurLaurels />
-            <PhotoGallery />
+            <Results />
+            <ScrollTop />
         </main>
     )
 }
 
-export default Home
+export default HomePage
