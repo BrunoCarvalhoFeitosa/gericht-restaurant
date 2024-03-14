@@ -54,7 +54,7 @@ export const BookATableForm = () => {
             classNames: {
                 error: "p-3 flex items-center gap-x-3 rounded-md text-sm border border-black bg-red-400",
                 info: "p-3 flex items-center gap-x-3 rounded-md text-sm border border-black bg-blue-400",
-                success: "p-3 flex items-center gap-x-3 rounded-md text-sm text-white border border-black bg-zinc-950",
+                success: "p-3 flex items-center gap-x-3 rounded-md text-sm text-black border border-black bg-white",
                 warning: "p-3 flex items-center gap-x-3 rounded-md text-sm border border-black bg-orange-400",
             }
         })
@@ -81,6 +81,7 @@ export const BookATableForm = () => {
                                     <FormControl>
                                         <Input
                                             {...field}
+                                            autoComplete="off"
                                             placeholder="First name"
                                             className="bg-[#090909] border-none outline-none focus:border-none focus:outline-none focus-visible:ring-0 focus-visible:ring-offset-0 rounded-none text-white"
                                         />
@@ -100,6 +101,7 @@ export const BookATableForm = () => {
                                     <FormControl>
                                         <Input
                                             {...field}
+                                            autoComplete="off"
                                             placeholder="Last name"
                                             className="bg-[#090909] border-none outline-none focus:border-none focus:outline-none focus-visible:ring-0 focus-visible:ring-offset-0 rounded-none text-white"
                                         />
@@ -119,6 +121,7 @@ export const BookATableForm = () => {
                                     <FormControl>
                                         <Input
                                             {...props}
+                                            autoComplete="off"
                                             placeholder="Document or CNPJ"
                                             className="bg-[#090909] border-none outline-none focus:border-none focus:outline-none focus-visible:ring-0 focus-visible:ring-offset-0 rounded-none text-white"
                                             maxLength={18}
@@ -147,6 +150,7 @@ export const BookATableForm = () => {
                                         <Input
                                             {...field}
                                             type="number"
+                                            autoComplete="off"
                                             placeholder="Number of guests"
                                             min={2}
                                             max={10}
@@ -206,6 +210,7 @@ export const BookATableForm = () => {
                                     <Input
                                         {...field}
                                         type="time"
+                                        autoComplete="off"
                                         className="bg-[#090909] border-none outline-none focus:border-none focus:outline-none focus-visible:ring-0 focus-visible:ring-offset-0 rounded-none text-white cursor-text"
                                     />
                                     <FormMessage className="text-sm text-[#555]" />

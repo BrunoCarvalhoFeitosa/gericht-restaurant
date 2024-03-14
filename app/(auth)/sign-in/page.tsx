@@ -47,7 +47,7 @@ const SignInPage = () => {
             classNames: {
                 error: "p-3 flex items-center gap-x-3 rounded-md text-sm border border-black bg-red-400",
                 info: "p-3 flex items-center gap-x-3 rounded-md text-sm border border-black bg-blue-400",
-                success: "p-3 flex items-center gap-x-3 rounded-md text-sm text-white border border-black bg-zinc-950",
+                success: "p-3 flex items-center gap-x-3 rounded-md text-sm text-black border border-black bg-white",
                 warning: "p-3 flex items-center gap-x-3 rounded-md text-sm border border-black bg-orange-400",
             }
         })
@@ -79,6 +79,7 @@ const SignInPage = () => {
                                     </FormLabel>
                                     <FormControl>
                                         <Input
+                                            autoComplete="off"
                                             placeholder="E-mail"
                                             className="bg-[#090909] border-none outline-none focus:border-none focus:outline-none focus-visible:ring-0 focus-visible:ring-offset-0 rounded-none text-white"
                                             {...field}

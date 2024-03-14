@@ -72,7 +72,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 .autoplay-progress {
   position: absolute;
-  bottom: 30px;
+  bottom: 20px;
   right: 28px;
   z-index: 10;
   width: 45px;
@@ -109,7 +109,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
   .swiper-button-prev {
     top: 48px !important;
-    left: 85% !important;
+    left: 86% !important;
   }
   
   .swiper-button-next {
@@ -118,8 +118,10 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   }
 
   .autoplay-progress {
-    top: 32px;
-    right: 70px;
+    top: 34px;
+    right: 65px;
+    width: 26px;
+    height: 26px;
   }
 }
 
@@ -140,7 +142,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   }
 
   .autoplay-progress {
-    top: 32px;
+    top: 30px;
     right: 85px;
     width: 36px;
     height: 36px;
