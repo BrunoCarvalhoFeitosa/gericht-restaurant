@@ -16,7 +16,7 @@ const NotFoundPage = () => {
                     </h2>
                     <button
                         type="button"
-                        className="mt-5 font-cormorant text-xl font-bold bg-[#DCCA87]"
+                        className="mt-5 font-cormorant text-xl font-bold bg-[#DCCA87] outline-none hover:opacity-85 duration-300"
                     >
                         <Link
                             href="/"

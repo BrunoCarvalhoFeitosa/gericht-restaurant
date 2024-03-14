@@ -2,9 +2,13 @@
 import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
+import { Toaster } from "@/components/ui/sonner"
+import { toast } from "sonner"
 import { z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
+import { formatDocument } from "@/utils/format-document"
+import { formatPhone } from "@/utils/format-phone"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
@@ -12,25 +16,24 @@ import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrig
 import { EyeIcon, EyeOffIcon } from "lucide-react"
 
 const formSchema = z.object({
-    name:
+    completeName:
         z
         .string()
         .min(2, { message: "Name must be at least 2 characters." })
-        .refine((value) => /^[a-zA-Z]+[-'s]?[a-zA-Z ]+$/.test(value), 'Name should contain only alphabets.'),
+        .refine((value) => /^[a-zA-Z]+[-"s]?[a-zA-Z ]+$/.test(value), "Name should contain only alphabets."),
     document:
         z
         .string()
-        .min(14, { message: "Document must be at least 14 characters." })
-        .refine((value) => /^\d{3}\.\d{3}\.\d{3}\-\d{2}$/.test(value), "Document does not follow the pattern."),
+        .min(14, { message: "Document must be at least 14 characters." }),
     gender:
         z
         .string()
-        .min(2, { message: "Gender must be at least 2 characters." }),
+        .min(1, { message: "Gender must be at least 1 character." })
+        .optional(),
     phone:
         z
         .string()
-        .min(1, { message: "Phone must be at least 2 characters." })
-        .refine((value) => /^((\(\d{3}\) ?)|(\d{3}[-\s]))?\d{3}[-\s]\d{4}$/.test(value), "Phone does not follow the pattern."),
+        .min(11, { message: "Phone must be at least 11 characters." }),
     email:
         z
         .string()
@@ -48,7 +51,7 @@ const SignUpPage = () => {
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
-            name: "",
+            completeName: "",
             document: "",
             gender: "",
             phone: "",
@@ -62,11 +65,22 @@ const SignUpPage = () => {
     }
 
     const onSubmit = (values: z.infer<typeof formSchema>) => {
-        console.log(values)
+        form.reset({})
+        toast.success(`${values.completeName} your registration was successful.`, {
+            unstyled: true,
+            duration: 5000,
+            classNames: {
+                error: "p-3 flex items-center gap-x-3 rounded-md text-sm border border-black bg-red-400",
+                info: "p-3 flex items-center gap-x-3 rounded-md text-sm border border-black bg-blue-400",
+                success: "p-3 flex items-center gap-x-3 rounded-md text-sm text-white border border-black bg-zinc-950",
+                warning: "p-3 flex items-center gap-x-3 rounded-md text-sm border border-black bg-orange-400",
+            }
+        })
     }
 
     return (
         <div className="mx-auto py-20 md:py-0 p-4 w-[90%] md:w-[90%] xl:w-[70%]">
+            <Toaster />
             <div>
                 <Link href="/">
                     <Image
@@ -79,14 +93,14 @@ const SignUpPage = () => {
             </div>
             <div className="mt-14">
                 <Form {...form}>
-                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 text-white">
                         <div className="flex flex-col md:flex-row items-center gap-6">
                             <FormField
                                 control={form.control}
-                                name="name"
+                                name="completeName"
                                 render={({ field }) => (
                                     <FormItem className="w-full">
-                                        <FormLabel className="text-white">
+                                        <FormLabel>
                                             Complete name
                                         </FormLabel>
                                         <FormControl>
@@ -103,16 +117,22 @@ const SignUpPage = () => {
                             <FormField
                                 control={form.control}
                                 name="document"
-                                render={({ field }) => (
+                                render={({ field: { onChange, ...props } }) => (
                                     <FormItem className="w-full">
-                                        <FormLabel className="text-white">
+                                        <FormLabel>
                                             Document
                                         </FormLabel>
                                         <FormControl>
                                             <Input
+                                                {...props}
                                                 placeholder="Document"
                                                 className="bg-[#090909] border-none outline-none focus:border-none focus:outline-none focus-visible:ring-0 focus-visible:ring-offset-0 rounded-none text-white"
-                                                {...field}
+                                                maxLength={18}
+                                                onChange={(event) => {
+                                                    const { value } = event.target
+                                                    event.target.value = formatDocument(value)
+                                                    onChange(event)
+                                                }}
                                             />
                                         </FormControl>
                                         <FormMessage className="text-sm text-[#222]" />
@@ -126,10 +146,10 @@ const SignUpPage = () => {
                                 name="gender"
                                 render={({ field }) => (
                                     <FormItem className="w-full">
-                                        <FormLabel className="text-white">
+                                        <FormLabel>
                                             Gender
                                         </FormLabel>
-                                        <Select>
+                                        <Select value={field.value} onValueChange={field.onChange}>
                                             <SelectTrigger className="peer pt-6 focus:ring-0 border-none outline-none p-2 w-full focus:border-none focus:outline-none rounded-none focus:ring-offset-0 hover:ring-offset-0 text-sm bg-[#090909] text-gray-500 disabled:opacity-50 disabled:pointer-events-none cursor-pointer">
                                                 <SelectValue placeholder="Gender" />
                                             </SelectTrigger>
@@ -138,10 +158,10 @@ const SignUpPage = () => {
                                                     <SelectLabel>
                                                         Gender
                                                     </SelectLabel>
-                                                    <SelectItem value="men">
+                                                    <SelectItem value="Men">
                                                         Men
                                                     </SelectItem>
-                                                    <SelectItem value="women">
+                                                    <SelectItem value="Women">
                                                         Women
                                                     </SelectItem>
                                                 </SelectGroup>
@@ -154,17 +174,22 @@ const SignUpPage = () => {
                             <FormField
                                 control={form.control}
                                 name="phone"
-                                render={({ field }) => (
+                                render={({ field: { onChange, ...props } }) => (
                                     <FormItem className="w-full">
-                                        <FormLabel className="text-white">
+                                        <FormLabel>
                                             Phone
                                         </FormLabel>
                                         <FormControl>
                                             <Input
+                                                {...props}
+                                                maxLength={15}
                                                 placeholder="Phone (999) 999-9999"
-                                                max={100}
                                                 className="bg-[#090909] border-none outline-none focus:border-none focus:outline-none focus-visible:ring-0 focus-visible:ring-offset-0 rounded-none text-white"
-                                                {...field}
+                                                onChange={(event) => {
+                                                    const { value } = event.target
+                                                    event.target.value = formatPhone(value)
+                                                    onChange(event)
+                                                }}
                                             />
                                         </FormControl>
                                         <FormMessage className="text-sm text-[#222]" />
@@ -178,14 +203,14 @@ const SignUpPage = () => {
                                 name="email"
                                 render={({ field }) => (
                                     <FormItem className="w-full">
-                                        <FormLabel className="text-white">
+                                        <FormLabel>
                                             E-mail
                                         </FormLabel>
                                         <FormControl>
                                             <Input
+                                                {...field}
                                                 placeholder="E-mail"
                                                 className="bg-[#090909] border-none outline-none focus:border-none focus:outline-none focus-visible:ring-0 focus-visible:ring-offset-0 rounded-none text-white"
-                                                {...field}
                                             />
                                         </FormControl>
                                         <FormMessage className="text-sm text-[#222]" />
@@ -197,21 +222,21 @@ const SignUpPage = () => {
                                 name="password"
                                 render={({ field }) => (
                                     <FormItem className="w-full">
-                                        <FormLabel className="text-white">
+                                        <FormLabel>
                                             Password
                                         </FormLabel>
                                         <FormControl>
                                             <div className="relative">
                                                 <Input
+                                                    {...field}
                                                     type={showPassword ? "text" : "password"}
                                                     placeholder="Password"
                                                     className="pr-12 bg-[#090909] border-none outline-none focus:border-none focus:outline-none focus-visible:ring-0 focus-visible:ring-offset-0 rounded-none text-white"
-                                                    {...field}
                                                 />
                                                 <button
                                                     type="button"
                                                     onClick={handleShowOrHidePassword}
-                                                    className="p-0 m-0 absolute top-[50%] right-3 translate-y-[-50%]"
+                                                    className="p-0 m-0 absolute top-[50%] right-3 translate-y-[-50%] outline-none"
                                                 >
                                                     {showPassword ? (
                                                         <EyeOffIcon
@@ -238,7 +263,7 @@ const SignUpPage = () => {
                         <Button
                             variant="ghost"
                             type="submit"
-                            className="px-10 text-black bg-[#DCCA87] hover:bg-[#DCCA87] rounded-none"
+                            className="px-10 text-black bg-[#DCCA87] outline-none hover:bg-[#DCCA87] hover:opacity-85 duration-300 rounded-none"
                         >
                             Sign up on restaurant
                         </Button>

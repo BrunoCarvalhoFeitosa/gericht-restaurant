@@ -2,6 +2,8 @@
 import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
+import { Toaster } from "sonner"
+import { toast } from "sonner"
 import { z } from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
@@ -38,11 +40,22 @@ const SignInPage = () => {
     }
 
     const onSubmit = (values: z.infer<typeof formSchema>) => {
-        console.log(values)
+        form.reset({})
+        toast.success(`Welcome, you logged in on restaurant with success.`, {
+            unstyled: true,
+            duration: 5000,
+            classNames: {
+                error: "p-3 flex items-center gap-x-3 rounded-md text-sm border border-black bg-red-400",
+                info: "p-3 flex items-center gap-x-3 rounded-md text-sm border border-black bg-blue-400",
+                success: "p-3 flex items-center gap-x-3 rounded-md text-sm text-white border border-black bg-zinc-950",
+                warning: "p-3 flex items-center gap-x-3 rounded-md text-sm border border-black bg-orange-400",
+            }
+        })
     }
 
     return (
         <div className="mx-auto p-4 w-[90%] md:w-[90%] xl:w-[70%]">
+            <Toaster />
             <div>
                 <Link href="/">
                     <Image
@@ -55,13 +68,13 @@ const SignInPage = () => {
             </div>
             <div className="mt-14">
                 <Form {...form}>
-                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 text-white">
                         <FormField
                             control={form.control}
                             name="email"
                             render={({ field }) => (
                                 <FormItem className="w-full">
-                                    <FormLabel className="text-white">
+                                    <FormLabel>
                                         E-mail
                                     </FormLabel>
                                     <FormControl>
@@ -80,7 +93,7 @@ const SignInPage = () => {
                             name="password"
                             render={({ field }) => (
                                 <FormItem className="w-full">
-                                    <FormLabel className="text-white">
+                                    <FormLabel>
                                         Password
                                     </FormLabel>
                                     <FormControl>
@@ -94,7 +107,7 @@ const SignInPage = () => {
                                             <button
                                                 type="button"
                                                 onClick={handleShowOrHidePassword}
-                                                className="p-0 m-0 absolute top-[50%] right-3 translate-y-[-50%]"
+                                                className="p-0 m-0 absolute top-[50%] right-3 translate-y-[-50%] outline-none"
                                             >
                                                 {showPassword ? (
                                                     <EyeOffIcon
@@ -120,7 +133,7 @@ const SignInPage = () => {
                         <Button
                             variant="ghost"
                             type="submit"
-                            className="px-10 text-black bg-[#DCCA87] hover:bg-[#DCCA87] rounded-none"
+                            className="px-10 text-black bg-[#DCCA87] outline-none hover:bg-[#DCCA87] hover:opacity-85 duration-300 rounded-none"
                         >
                             Sign in on restaurant
                         </Button>

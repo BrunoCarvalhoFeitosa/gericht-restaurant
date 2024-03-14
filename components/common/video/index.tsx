@@ -36,7 +36,7 @@ export const Video = () => {
             <div className="absolute top-0 left-0 flex justify-center items-center w-full h-full bg-black/70 z-10">
                 <button
                     type="button"
-                    className="group flex justify-center items-center w-24 h-24 outline-none rounded-full border border-[#DCCA87] hover:bg-[#DCCA87] transition-all duration-300"
+                    className="group flex justify-center items-center w-24 h-24 outline-none rounded-full border border-[#DCCA87] hover:bg-[#DCCA87] hover:opacity-85 duration-300 transition-all duration-300"
                     onClick={handleVideoAction}
                 >
                     {isPlayingVideo ? (

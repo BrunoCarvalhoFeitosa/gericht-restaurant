@@ -16,7 +16,7 @@ export const AboutUs = () => {
                     </p>
                     <a
                         href="/about-us"
-                        className="mt-8 flex items-center justify-end gap-x-3 bg-[#DCCA87] px-12 py-3 font-cormorant text-lg font-medium w-fit transition focus:outline-none focus:ring"
+                        className="px-12 py-3 mt-8 flex items-center justify-end gap-x-3 bg-[#DCCA87] hover:opacity-85 duration-300 font-cormorant text-lg font-medium w-fit transition focus:outline-none focus:ring"
                     >
                         Know More
                         <MoveRightIcon className="w-5 h-5" />
@@ -41,7 +41,7 @@ export const AboutUs = () => {
                     </p>
                     <a
                         href="/our-history"
-                        className="mt-8 flex items-center justify-end gap-x-3 bg-[#DCCA87] px-12 py-3 font-cormorant text-lg font-medium w-fit transition focus:outline-none focus:ring"
+                        className="px-12 py-3 mt-8 flex items-center justify-end gap-x-3 bg-[#DCCA87] hover:opacity-85 duration-300 font-cormorant text-lg font-medium w-fit transition focus:outline-none focus:ring"
                     >
                         Know More
                         <MoveRightIcon className="w-5 h-5" />

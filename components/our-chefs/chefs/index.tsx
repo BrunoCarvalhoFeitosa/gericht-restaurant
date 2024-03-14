@@ -1,7 +1,7 @@
 "use client"
-import { chefs } from "@/utils/chefs"
-import { FacebookIcon, InstagramIcon, MoveRightIcon, TwitterIcon } from "lucide-react"
 import Link from "next/link"
+import { chefs } from "@/utils/chefs"
+import { MoveRightIcon } from "lucide-react"
 
 export const Chefs = () => {
     return (
@@ -23,7 +23,7 @@ export const Chefs = () => {
                                         <div className="relative w-full h-full">
                                             <div className="absolute left-[50%] translate-x-[-50%] bottom-10 w-full flex justify-center">
                                                 <Link href={`/our-chefs/${chef.name}`}>
-                                                    <button className="mt-8 flex items-center gap-x-3 bg-[#DCCA87] px-12 py-3 font-cormorant text-lg font-medium text-black w-fit transition focus:outline-none focus:ring">
+                                                    <button className="px-12 py-3 mt-8 flex items-center gap-x-3 bg-[#DCCA87] outline-none hover:opacity-85 duration-300 font-cormorant text-lg font-medium text-black w-fit transition focus:outline-none focus:ring">
                                                         Meet the chef
                                                         <MoveRightIcon className="w-5 h-5" />
                                                     </button>
